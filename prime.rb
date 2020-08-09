@@ -1,19 +1,28 @@
-def prime?(x)
-  if x == 1
-    return true 
-  elsif x < 1
-    return false
-  else
-  for y in 2..(x-1)
-    if (x % y) == 0
-      return false 
-    end
-  end 
-end
+def prime_numbers(number):
+    prime_list = []
 
- true
- end 
- 
+    if number > 0:
+        for i in range(2, number):
+            if is_prime(i):
+                prime_list.append(i)
+                # print(prime_list)
+            # else:
+                # prime_list.append(number)
+                # print(prime_list)
+        return prime_list
+    else:
+        return prime_list
+
+
+def is_prime(number):
+    if number == 2:
+        return True
+    else:
+        for n in range(2, number + 1):
+            if number % n == 0:
+                return False
+            else:
+                return True
 
 
 
