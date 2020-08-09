@@ -1,10 +1,15 @@
 def prime?(x)
   if x == 1
     return true 
-  else x < 1
+  elsif x < 1
     return false
-  end
-
+  else
+  for y in 2..(x-1)
+    if (x % y) == 0
+      return false 
+    end
+  end 
+end
 
   true 
 end
