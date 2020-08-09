@@ -8,12 +8,6 @@ def sorting(top)
     counter += 1
     (i*i).step(top,i) { |y| prime_numbers[y] = nil }
   end
-puts "Solved for #{top} in #{counter} steps."
-  prime_numbers.compact
-end
-def prime?(number)
-  sorting(number).include?(number)
-end
 
 puts prime?(105557)
   
